@@ -1,17 +1,29 @@
-document.getElementById("btn_submit").onclick = send;
+window.onload = function() {
+	document.getElementById("btn_submit").onclick = send;
+};
 
-var xhr = createXHR();
+var xhr;
 
 function send() {
-	var method = "get";
+	var method = "GET";
 	var url = "HelloWorld";
-	xhr = createXHR();
+	createXHR();
+
+	//파라미터 구성
+	var name = document.getElementById("name").value;
+	
+	url = url + "?" + "name=" + encodeURIComponent(name);
 	
 	xhr.open(method, url, true);
 	xhr.onreadystatechange = callback;
-	xhr.send();
+	xhr.send(null);
 }
 
+function callback() {
+	if (xhr.readyState == 4 && xhr.status == 200) {
+		document.getElementById("div_result").innerHTML = xhr.responseText;
+	}
+}
 
 function createXHR() {
 	try {

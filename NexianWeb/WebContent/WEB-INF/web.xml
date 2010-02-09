@@ -14,4 +14,14 @@
     <servlet-name>RegistFormServlet</servlet-name>
     <url-pattern>/RegistFormServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckIdServlet</display-name>
+    <servlet-name>CheckIdServlet</servlet-name>
+    <servlet-class>my.ajax.controller.CheckIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckIdServlet</servlet-name>
+    <url-pattern>/CheckIdServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

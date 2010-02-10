@@ -24,4 +24,14 @@
     <servlet-name>CheckIdServlet</servlet-name>
     <url-pattern>/CheckIdServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchByIdServlet</display-name>
+    <servlet-name>SearchByIdServlet</servlet-name>
+    <servlet-class>my.ajax.controller.SearchByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchByIdServlet</servlet-name>
+    <url-pattern>/SearchByIdServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

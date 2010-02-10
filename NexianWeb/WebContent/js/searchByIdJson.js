@@ -19,7 +19,23 @@ function searchById(e) {
 }
 
 function callback(responseText) {
+	initialize();
 	
+	// eval 사용시 '(' ')' 문자열을 덧붙이면 json 객체로 변환됨
+	var results = eval("(" + responseText + ")").list;
+	
+	var ulEl = document.createElement("ul");
+	
+	for (var i = 0; i < results.length; i++) {
+		var name = results[i].name;
+		
+		var textEl = document.createTextNode(name);
+		var liEl = document.createElement("li");
+		liEl.appendChild(textEl);
+		ulEl.appendChild(liEl);
+	}
+	
+	document.getElementById("div_result").appendChild(ulEl);
 }
 
 function initialize() {

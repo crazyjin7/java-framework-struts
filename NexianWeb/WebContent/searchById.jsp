@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>아이디로 검색</title>
 	<script type="text/javascript" src="./js/ajax_helper.js"></script>
-	<script type="text/javascript" src="./js/searchById.js"></script>
+	<%-- <script type="text/javascript" src="./js/searchById.js"></script> --%>
+	<script type="text/javascript" src="./js/searchByIdJson.js"></script>
 </head>
 <body>
 

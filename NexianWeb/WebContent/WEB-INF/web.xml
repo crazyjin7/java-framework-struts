@@ -34,4 +34,14 @@
     <servlet-name>SearchByIdServlet</servlet-name>
     <url-pattern>/SearchByIdServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchByIdJsonServlet</display-name>
+    <servlet-name>SearchByIdJsonServlet</servlet-name>
+    <servlet-class>my.ajax.controller.SearchByIdJsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchByIdJsonServlet</servlet-name>
+    <url-pattern>/SearchByIdJsonServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

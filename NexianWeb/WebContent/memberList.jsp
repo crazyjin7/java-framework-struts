@@ -24,6 +24,16 @@
 		<tbody>
 		</tbody>
 	</table>
+	
+	<form id="memberForm" action="" method="post">
+		아이디 : <input type="text" id="id" name="id" /><br/>
+		이름 : <input type="text" id="name" name="name" /><br/>
+		닉네임: <input type="text" id="nick" name="nick" /><br/>
+		이메일 : <input type="text" id="email" name="email" /><br/>
+		비고 : <input type="text" id="note" name="note" /><br/>
+		<input type="submit" value="수정" />
+		<input type="reset" value="취소" />
+	</form>
 
 </body>
 </html>

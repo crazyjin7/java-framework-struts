@@ -54,4 +54,14 @@
     <servlet-name>FindAllMemberServlet</servlet-name>
     <url-pattern>/FindAllMemberServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindMemberServlet</display-name>
+    <servlet-name>FindMemberServlet</servlet-name>
+    <servlet-class>my.ajax.controller.FindMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindMemberServlet</servlet-name>
+    <url-pattern>/FindMemberServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

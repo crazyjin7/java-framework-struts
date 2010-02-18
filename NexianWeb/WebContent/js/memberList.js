@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$("#memberForm").hide();
+
 	callInitData();
 
 	eventBind();
@@ -30,8 +32,29 @@ function callback(responseObj, status) {
 		
 		$("#memberList tbody").append(trEl);
 	}
+	
+	eventBind();
 }
 
 function eventBind() {
-	
+	$("#memberList tbody tr").click(findMember);
 }
+
+function findMember(e) {
+	var id = $(e.target).parent().children()[0].innerHTML;
+	
+	var url = "FindMemberServlet";
+	var params = "id=" + id;
+	$.getJSON(url, params, findMemberCallback);
+}
+
+function findMemberCallback(responseObj, status) {
+	var obj = responseObj.member;
+	
+	for (var prop in obj) {
+		$("#" + prop).val(obj[prop]);
+	}
+	
+	$("#memberForm").show();
+}
+

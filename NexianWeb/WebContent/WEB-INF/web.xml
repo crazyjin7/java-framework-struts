@@ -44,4 +44,14 @@
     <servlet-name>SearchByIdJsonServlet</servlet-name>
     <url-pattern>/SearchByIdJsonServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindAllMemberServlet</display-name>
+    <servlet-name>FindAllMemberServlet</servlet-name>
+    <servlet-class>my.ajax.controller.FindAllMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindAllMemberServlet</servlet-name>
+    <url-pattern>/FindAllMemberServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

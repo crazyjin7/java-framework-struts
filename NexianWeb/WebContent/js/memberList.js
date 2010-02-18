@@ -1,0 +1,32 @@
+$(document).ready(function() {
+	callInitData();
+
+	eventBind();
+});
+
+function callInitData() {
+	var url = "FindAllMemberServlet";
+	var params = null;
+
+	$.getJSON(url, params, callback);
+}
+
+function callback(responseObj, status) {
+	var results = responseObj.list;
+	for (var i = 0; i < results.length; i++) {
+		
+		var trEl = $("<tr>");
+
+		$("<td>").text(results[i].id).appendTo(trEl);
+		$("<td>").text(results[i].name).appendTo(trEl);
+		$("<td>").text(results[i].nick).appendTo(trEl);
+		$("<td>").text(results[i].email).appendTo(trEl);
+		$("<td>").text(results[i].note).appendTo(trEl);
+		
+		$("#memberList tbody").append(trEl);
+	}
+}
+
+function eventBind() {
+	
+}

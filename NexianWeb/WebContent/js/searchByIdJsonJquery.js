@@ -10,16 +10,19 @@ function searchById(e) {
 	//var id = e.target.value;
 	var id = $(e.target).val();
 	
-	var params = "searchId=" + id;
+	//var params = "searchId=" + id;
+	var params = {searchId: id};
 	
-	$.post(url, params, callback);
+	//$.post(url, params, callback);
+	$.getJSON(url, params, callback);
 	
 }
 
 function callback(responseText, status) {
 	initialize();
-	
-	var results = eval("(" + responseText + ")").list;
+
+	//var results = eval("(" + responseText + ")").list;
+	var results = responseText.list;
 	
 	var ulEl = $("<ul>");
 	

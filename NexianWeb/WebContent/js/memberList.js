@@ -17,11 +17,16 @@ function callback(responseObj, status) {
 		
 		var trEl = $("<tr>");
 
-		$("<td>").text(results[i].id).appendTo(trEl);
+		/*$("<td>").text(results[i].id).appendTo(trEl);
 		$("<td>").text(results[i].name).appendTo(trEl);
 		$("<td>").text(results[i].nick).appendTo(trEl);
 		$("<td>").text(results[i].email).appendTo(trEl);
-		$("<td>").text(results[i].note).appendTo(trEl);
+		$("<td>").text(results[i].note).appendTo(trEl);*/
+		
+		var obj = results[i];
+		for (var prop in obj) {
+			$("<td>").text(obj[prop]).appendTo(trEl);
+		}
 		
 		$("#memberList tbody").append(trEl);
 	}

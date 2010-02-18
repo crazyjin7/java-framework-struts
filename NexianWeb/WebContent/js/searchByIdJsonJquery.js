@@ -17,5 +17,21 @@ function searchById(e) {
 }
 
 function callback(responseText, status) {
-	alert(responseText);
+	initialize();
+	
+	var results = eval("(" + responseText + ")").list;
+	
+	var ulEl = $("<ul>");
+	
+	for (var i = 0; i < results.length; i++) {
+		var name = results[i].name;
+		var liEl = $("<li>").text(name);
+		ulEl.append(liEl);
+	}
+	
+	$("#div_result").append(ulEl);
+}
+
+function initialize() {
+	$("#div_result").empty();
 }

@@ -14,6 +14,8 @@ function callInitData() {
 }
 
 function callback(responseObj, status) {
+	$("#memberList tbody").empty();
+	
 	var results = responseObj.list;
 	for (var i = 0; i < results.length; i++) {
 		
@@ -27,6 +29,8 @@ function callback(responseObj, status) {
 		
 		var obj = results[i];
 		for (var prop in obj) {
+			if (prop == "password")
+				continue;
 			$("<td>").text(obj[prop]).appendTo(trEl);
 		}
 		
@@ -38,6 +42,8 @@ function callback(responseObj, status) {
 
 function eventBind() {
 	$("#memberList tbody tr").click(findMember);
+	
+	$("#memberForm").submit(updateMember);
 }
 
 function findMember(e) {
@@ -56,5 +62,23 @@ function findMemberCallback(responseObj, status) {
 	}
 	
 	$("#memberForm").show();
+}
+
+function updateMember(e) {
+	//$("#memberForm") 대신 e.target 사용가능
+	var params = $("#memberForm").serialize();
+	
+	var url = "UpdateMemberServlet";
+	$.getJSON(url, params, updateMemberCallback);
+	
+	//return false;
+	e.preventDefault();
+}
+
+function updateMemberCallback(responseObj, status) {
+	//응답 값에 대한 유효성 검사 이후 리스트 호출
+	callInitData();
+	
+	$("#memberForm").hide(1000);
 }
 

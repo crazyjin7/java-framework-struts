@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/memberList.js"></script>
 	
-	<table id="memberList">
+	<table id="memberList" style="font-size: small; border-style: solid; border-width: thin;">
 		<caption>회원 목록</caption>
 		<thead>
 			<tr>
@@ -24,6 +24,8 @@
 		<tbody>
 		</tbody>
 	</table>
+	
+	<div style="margin-bottom: 40px;"></div>
 	
 	<form id="memberForm" action="" method="post">
 		아이디 : <input type="text" id="id" name="id" /><br/>

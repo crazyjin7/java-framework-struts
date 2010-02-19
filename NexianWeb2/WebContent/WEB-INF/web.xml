@@ -31,6 +31,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>SearchBookJsonServlet</display-name>
+    <servlet-name>SearchBookJsonServlet</servlet-name>
+    <servlet-class>my.bookstore.controller.SearchBookJsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchBookJsonServlet</servlet-name>
+    <url-pattern>/SearchBookJsonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>FindAllBookListServlet</display-name>
     <servlet-name>FindAllBookListServlet</servlet-name>
     <servlet-class>my.bookstore.controller.FindAllBookListServlet</servlet-class>

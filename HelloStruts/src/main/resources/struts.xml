@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.actionProxyFactory" value="struts" />
+	<constant name="struts.mapper.class" value="struts" />
+	<constant name="struts.action.extension" value="xhtml,action" />
+
+	<package name="helloWorld" namespace="/" extends="struts-default">
+		<action name="helloIndex">
+			<result>/sample/helloworldIndex.jsp</result>
+		</action>
+		<action name="helloworld" class="kr.kosta.struts.sample.HelloWorldAction">
+			<result>/sample/helloworld.jsp</result>
+		</action>
+	</package>
+
+	<include file="struts-actionsample.xml" />
+	<include file="struts-resultsample.xml" />
+	<include file="struts-test.xml" />
+
+</struts>

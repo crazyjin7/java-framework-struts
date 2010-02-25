@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- 액션 execute() 이외의 메소드 사용 예제-->
+	<package name="hello" namespace="/hello" extends="struts-default">
+		<action name="helloIndex">
+			<result>/actionsample/helloIndex.jsp</result>
+		</action>
+
+		<action name="struts" class="kr.kosta.struts.actionsample.HelloAction" method="helloStruts">
+			<result>/actionsample/hello.jsp</result>
+		</action>
+		<action name="spring" class="kr.kosta.struts.actionsample.HelloAction" method="helloSpring">
+			<result>/actionsample/hello.jsp</result>
+		</action>
+		<action name="test" class="kr.kosta.struts.actionsample.HelloAction" method="helloTest">
+			<result>/actionsample/hello.jsp</result>
+		</action>
+	</package>
+
+    <!-- 액션 와일드 카드 매핑 예제  -->
+	<package name="helloWildCard" namespace="/helloWildCard" extends="struts-default">
+		<action name="helloIndex">
+			<result>/actionsample/helloWildCardIndex.jsp</result>
+		</action>
+
+		<action name="hello_*" class="kr.kosta.struts.actionsample.HelloAction" method="{1}">
+			<result>/actionsample/hello.jsp</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,22 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC   "-//Mort Bay Consulting//DTD Configure 1.1//EN" "http://jetty.mortbay.org/configure_1_2.dtd">
+<Configure class="org.mortbay.jetty.Server">
+
+	<!-- mysql ds -->
+	<New id="MALL_DS" class="org.mortbay.jetty.plus.naming.Resource">
+		<Arg>java:MALL_DS</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+				<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+				<Set name="url">jdbc:mysql://localhost/struts</Set>
+				<Set name="username">strutsuser</Set>
+				<Set name="password">strutsuser</Set>
+			</New>
+		</Arg>
+	</New>
+
+	<Call class="java.lang.System" name="setProperty">
+		<Arg>org.mortbay.jetty.Request.maxFormContentSize</Arg>
+		<Arg>30000</Arg>
+	</Call>
+</Configure>

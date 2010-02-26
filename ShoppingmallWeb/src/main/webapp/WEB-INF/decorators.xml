@@ -12,4 +12,8 @@
         <pattern>/member/*</pattern>
     </decorator>
 
+    <decorator name="secondLayout" page="secondLayout.jsp">
+        <pattern>/noneSitemesh/*</pattern>
+    </decorator>
+
 </decorators>

@@ -16,4 +16,8 @@
         <pattern>/noneSitemesh/*</pattern>
     </decorator>
 
+    <decorator name="secondLayout" page="thirdLayout.jsp">
+        <pattern>/anotherSitemesh/*</pattern>
+    </decorator>
+
 </decorators>

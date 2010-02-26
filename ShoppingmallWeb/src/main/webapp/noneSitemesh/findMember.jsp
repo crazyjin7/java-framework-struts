@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<META name="findMember" content="회원찾기">
+<META name="findMember" content="회원찾기2">
 <title>Member</title>
 
 <script type="text/javascript">

@@ -161,17 +161,28 @@
 			<version>${struts.version}</version>
 		</dependency>
 
-		<!--
-			<dependency> <groupId>com.googlecode.jsonplugin</groupId>
-			<artifactId>jsonplugin</artifactId> <version>0.30</version>
-			<exclusions> <exclusion> <groupId>org.apache.struts</groupId>
-			<artifactId>struts2-core</artifactId> </exclusion> <exclusion>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-junit-plugin</artifactId> </exclusion>
-			</exclusions> </dependency> <dependency>
-			<groupId>com.servlets</groupId> <artifactId>cos</artifactId>
-			<version>09May2002</version> </dependency>
-		-->
+		<dependency>
+			<groupId>com.googlecode</groupId>
+			<artifactId>jsonplugin</artifactId>
+			<version>0.34</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts2-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts2-junit-plugin</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.servlets</groupId>
+			<artifactId>cos</artifactId>
+			<version>09May2002</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>

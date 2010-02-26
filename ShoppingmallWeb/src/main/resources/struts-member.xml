@@ -7,24 +7,32 @@
 <struts>
 
 	<package name="member" namespace="/member" extends="struts-default">
-		<action name="member_*" class="kr.kosta.mall.action.MemberAction" method="{1}">
+		<action name="member_*" class="kr.kosta.mall.action.MemberAction"
+			method="{1}">
 			<result>/member/memberResult.jsp</result>
 		</action>
 
 	</package>
 
 	<package name="noSitemesh" namespace="/noSitemesh" extends="struts-default">
-		<action name="member_*" class="kr.kosta.mall.action.MemberAction" method="{1}">
+		<action name="member_*" class="kr.kosta.mall.action.MemberAction"
+			method="{1}">
 			<result>/noSitemesh/memberResult.jsp</result>
 		</action>
 	</package>
-<!--
-	<package name="ajax" namespace="/ajax" extends="struts-default">
-		<action name="member_*" class="kr.kosta.mall.action.MemberAction" method="{1}">
-			<result name="ajax">
- 				<param name="resultString">memberName</param>
- 			</result>
+
+	<package name="ajax" namespace="/ajax" extends="json-default">
+
+		<result-types>
+			<result-type name="json" class="com.googlecode.jsonplugin.JSONResult" />
+		</result-types>
+		<global-results>
+			<result name="jsonResult" type="json" />
+		</global-results>
+
+		<action name="showUsableLoginId" class="kr.kosta.mall.action.MemberJoinAction"
+			method="showUsableLoginId">
 		</action>
 	</package>
-	 -->
+
 </struts>
